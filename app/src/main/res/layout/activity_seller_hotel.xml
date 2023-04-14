@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.webdigital.subbisky.activity.SellerHotelActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:titleTextAppearance="@style/ActionBarTextAppearance">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linerLayoutBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_baseline_keyboard_arrow_left_24"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/Back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Services"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/profile_bg"
+            android:orientation="horizontal"
+            android:padding="10dp">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/createbtn"
+                android:background="@drawable/sellerdetailsbutton"
+                android:text="Create"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:paddingRight="30dp"
+                android:paddingLeft="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"/>
+            <!--    </LinearLayout>-->
+            <!--        <LinearLayout-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:background="@drawable/profile_bg"-->
+            <!--            android:orientation="horizontal"-->
+            <!--            android:padding="10dp">-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginLeft="125dp"
+                android:text="Swipe Right->"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </ScrollView>
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/brand_main_3"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width = "350dp"
+                    android:layout_height = "50dp"
+                    android:layout_weight = "3"
+                    android:gravity = "center"
+                    android:padding = "5dp"
+                    android:text = "Images"
+                    android:textSize="14sp"
+                    android:textColor = "#fff"/>
+                <TextView
+                    android:layout_width = "120dp"
+                    android:layout_height = "50dp"
+                    android:layout_weight = "3"
+                    android:gravity = "center"
+                    android:padding = "5dp"
+                    android:text = "Name"
+                    android:textSize="14sp"
+                    android:textColor = "#fff"/>
+                <TextView
+                    android:layout_width = "120dp"
+                    android:layout_height = "50dp"
+                    android:layout_weight = "3"
+                    android:gravity = "center"
+                    android:padding = "5dp"
+                    android:text = "Price"
+                    android:textSize="14sp"
+                    android:textColor = "#fff"/>
+                <TextView
+                    android:layout_width = "120dp"
+                    android:layout_height = "50dp"
+                    android:layout_weight = "3"
+                    android:gravity = "center"
+                    android:padding = "5dp"
+                    android:text = "Status"
+                    android:textSize="14sp"
+                    android:textColor = "#fff"/>
+                <TextView
+                    android:layout_width = "120dp"
+                    android:layout_height = "50dp"
+                    android:layout_weight = "3"
+                    android:gravity = "center"
+                    android:padding = "5dp"
+                    android:text = "Action"
+                    android:textSize="14sp"
+                    android:textColor = "#fff"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id = "@+id/sellerHotelsRecycler"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>

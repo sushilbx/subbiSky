@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:padding="20dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/profile_bg"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:text="Change Status"
+        android:textColor="@color/md_blue_900" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/line_round"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="2dp"
+        android:text="Select Status"
+        android:textColor="@color/md_blue_900" />
+
+    <Spinner
+        android:id="@+id/OrderStatus"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="4dp"
+        android:hint="Status"
+        android:background="@drawable/textboxdesign"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:entries="@array/OrderStatus"
+        android:textColor="@color/black" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/ChangeStatusBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_gravity="center"
+            android:background="@drawable/sellerdetailsbutton"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

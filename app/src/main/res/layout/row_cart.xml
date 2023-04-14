@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/card_view_top"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="12dp"
+    android:layout_margin="5dp"
+    android:background="@color/white"
+    android:minWidth="116dp"
+    card_view:cardPreventCornerOverlap="false"
+    android:elevation="4dp"
+    card_view:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+
+        <FrameLayout
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/item_image"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/product_image"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:scaleType="fitCenter"
+                />
+            <ProgressBar
+                android:visibility="gone"
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="start"
+            android:layout_toRightOf="@+id/item_image"
+            android:gravity="start"
+            android:paddingLeft="4dp"
+            android:text="Product Title"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/product_price"
+            android:text="Unit Price:"
+            android:padding="4dp"
+            android:textSize="16dp"
+            android:layout_toRightOf="@+id/item_image"
+            android:layout_below="@+id/product_name"
+            />
+
+
+        <TextView
+            android:id="@+id/qName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity:"
+            android:padding="4dp"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@+id/item_image"
+            android:textSize="16dp"
+            android:layout_below="@+id/product_price"
+            />
+
+        <LinearLayout
+            android:id="@+id/qty_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_price"
+            android:layout_toRightOf="@+id/qName"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/image_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:padding="7dp"
+                android:src="@drawable/minus"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/txt_qty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/product_name"
+                android:layout_toRightOf="@+id/image_minus"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/image_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txt_qty"
+                android:clickable="true"
+                android:padding="7dp"
+                android:src="@drawable/plus"
+                android:visibility="visible" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/unitName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unit:"
+            android:padding="4dp"
+            android:layout_toRightOf="@+id/item_image"
+            android:textSize="16dp"
+            android:layout_below="@+id/qName"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/total_price"
+            android:text="Total price:"
+            android:padding="4dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/item_image"
+            android:layout_below="@+id/unitName"
+            />
+
+        <ImageView
+            android:id="@+id/deleteImage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:src="@drawable/delt" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context="com.webdigital.subbisky.activity.SellerOrderDetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:titleTextAppearance="@style/ActionBarTextAppearance">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linerLayoutBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_baseline_keyboard_arrow_left_24"
+                    tools:ignore="VectorDrawableCompat" />
+
+
+
+                <TextView
+                    android:id="@+id/SellerMyShopDetailstextHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Booking Details"
+                    android:layout_marginLeft="100dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:paddingHorizontal="8dp"
+        android:layout_marginBottom="-20dp"
+        android:textSize="25dp"
+        android:hint="Booking Details"
+        android:paddingVertical="4dp"
+        android:textColor="#F68904" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="30dp"
+        android:padding="5dp"
+        android:background="@drawable/profile_bg">
+
+
+        <TextView
+            android:id="@+id/orderBookingId"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:gravity="center"
+            android:background="@drawable/textboxdesign"
+            android:paddingHorizontal="8dp"
+            android:hint="BookingId"
+            android:paddingVertical="4dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/orderHotelName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:gravity="center"
+            android:background="@drawable/textboxdesign"
+            android:paddingHorizontal="8dp"
+            android:hint="Hotel"
+            android:paddingVertical="4dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/hotelCheckInTime"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:gravity="center"
+            android:background="@drawable/textboxdesign"
+            android:paddingHorizontal="8dp"
+            android:hint="ChekIn Time"
+            android:paddingVertical="4dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/hotelCheckOutTime"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:gravity="center"
+            android:background="@drawable/textboxdesign"
+            android:paddingHorizontal="8dp"
+            android:hint="Checkout Time"
+            android:paddingVertical="4dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/numOfAdults"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:gravity="center"
+            android:background="@drawable/textboxdesign"
+            android:paddingHorizontal="8dp"
+            android:hint="No of Adults"
+            android:paddingVertical="4dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/numOfChildren"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_margin="4dp"
+            android:background="@drawable/textboxdesign"
+            android:paddingHorizontal="8dp"
+            android:hint="No of Children"
+            android:paddingVertical="4dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/numOfRoom"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/textboxdesign"
+            android:paddingHorizontal="8dp"
+            android:hint="No of Room"
+            android:gravity="center"
+            android:paddingVertical="4dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/adultExtraCharge"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/textboxdesign"
+            android:paddingHorizontal="8dp"
+            android:hint="Adult Ext Charge"
+            android:gravity="center"
+            android:paddingVertical="4dp"
+            android:textColor="@color/black" />
+        <TextView
+        android:id="@+id/childrenExtraCharge"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="4dp"
+        android:background="@drawable/textboxdesign"
+        android:paddingHorizontal="8dp"
+        android:hint="Children Extra Charge"
+            android:gravity="center"
+        android:paddingVertical="4dp"
+        android:textColor="@color/black" />
+        <TextView
+        android:id="@+id/amountPaid"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="4dp"
+        android:background="@drawable/textboxdesign"
+        android:paddingHorizontal="8dp"
+        android:hint="Amount Paid"
+            android:gravity="center"
+        android:paddingVertical="4dp"
+        android:textColor="@color/black" />
+        <TextView
+        android:id="@+id/orderStatus"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+            android:gravity="center"
+        android:layout_margin="4dp"
+        android:background="@drawable/textboxdesign"
+        android:paddingHorizontal="8dp"
+        android:hint="Status"
+        android:paddingVertical="4dp"
+        android:textColor="@color/black" />
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

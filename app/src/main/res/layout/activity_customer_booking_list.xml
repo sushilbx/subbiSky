@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.webdigital.subbisky.activity.CustomerBookingList">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:titleTextAppearance="@style/ActionBarTextAppearance"
+        app:titleTextColor="@color/colorWhite">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linerLayoutBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/imgBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_baseline_keyboard_arrow_left_24"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/textHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textTitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Bookings"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                app:srcCompat="@drawable/ic_baseline_shopping_cart_24"
+                tools:ignore="VectorDrawableCompat" />
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/brand_main_3"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width = "100dp"
+                    android:layout_height = "50dp"
+                    android:layout_weight = "3"
+                    android:gravity = "center"
+                    android:padding = "5dp"
+                    android:text = "Booking Id"
+                    android:textSize="14sp"
+                    android:textColor = "#fff"/>
+                <TextView
+                    android:layout_width = "150dp"
+                    android:layout_height = "50dp"
+                    android:layout_weight = "3"
+                    android:gravity = "center"
+                    android:padding = "5dp"
+                    android:text = "Booking Date"
+                    android:textSize="14sp"
+                    android:textColor = "#fff"/>
+                <TextView
+                    android:layout_width = "120dp"
+                    android:layout_height = "50dp"
+                    android:layout_weight = "3"
+                    android:gravity = "center"
+                    android:padding = "5dp"
+                    android:text = "Status"
+                    android:textSize="14sp"
+                    android:textColor = "#fff"/>
+                <TextView
+                    android:layout_width = "120dp"
+                    android:layout_height = "50dp"
+                    android:layout_weight = "3"
+                    android:gravity = "center"
+                    android:padding = "5dp"
+                    android:text = "Total"
+                    android:textSize="14sp"
+                    android:textColor = "#fff"/>
+                <TextView
+                    android:layout_width = "120dp"
+                    android:layout_height = "50dp"
+                    android:layout_weight = "3"
+                    android:gravity = "center"
+                    android:padding = "5dp"
+                    android:text = "View Booking Details"
+                    android:textSize="14sp"
+                    android:textColor = "#fff"/>
+
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id ="@+id/customerBookingRecycler"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>

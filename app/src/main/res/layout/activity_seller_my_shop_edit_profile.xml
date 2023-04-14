@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.webdigital.subbisky.activity.SellerMyShopEditProfileActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:titleTextAppearance="@style/ActionBarTextAppearance">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left">
+
+            <LinearLayout
+                android:id="@+id/linerLayoutBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_baseline_keyboard_arrow_left_24"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/SellerMyShopDetailstextHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MyShop"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="140dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Edit Profile"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginBottom="10dp"
+                android:text="Edit Profile"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/profile_bg"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="Shop Name"
+                    android:textColor="@color/md_blue_900" />
+
+                <EditText
+                    android:id="@+id/SellerMyShopNameEditDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:hint="Name"
+                    android:text=""
+                    android:background="@drawable/textboxdesign"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:textColor="@color/black" />
+                <ImageView
+                    android:id="@+id/SellermyShopImageEditDetails"
+                    android:layout_width="230dp"
+                    android:layout_height="140dp"
+                    android:layout_margin="20dp"
+                    android:src="@drawable/subbiskylogo"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="Shop Image"
+                    android:textColor="@color/md_blue_900" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/profile_bg"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/chooseImagesellerprofile"
+                        android:background="@drawable/sellerdetailsbutton"
+                        android:text="Choose file"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:paddingRight="50dp"
+                        android:paddingLeft="50dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="2dp"
+                        android:text="Image Name"
+                        android:textColor="@color/grey_dark" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="City"
+                    android:textColor="@color/md_blue_900" />
+
+                <Spinner
+                    android:id="@+id/SellerMyShopCityEditDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/textboxdesign"
+                    android:paddingHorizontal="8dp"
+                    android:text=""
+                    android:hint="City"
+                    android:paddingVertical="4dp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="Phone"
+                    android:textColor="@color/md_blue_900" />
+
+                <EditText
+                    android:id="@+id/SellerMyShopPhoneEditDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/textboxdesign"
+                    android:paddingHorizontal="8dp"
+                    android:text=""
+                    android:hint="Phone"
+                    android:inputType="phone"
+                    android:paddingVertical="4dp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="Email Address"
+                    android:textColor="@color/md_blue_900" />
+
+                <EditText
+                    android:id="@+id/SellerMyShopEmailEditDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/textboxdesign"
+                    android:paddingHorizontal="8dp"
+                    android:text=""
+                    android:inputType="textWebEmailAddress"
+                    android:hint="Email"
+                    android:paddingVertical="4dp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="Address"
+                    android:textColor="@color/md_blue_900" />
+
+                <EditText
+                    android:id="@+id/SellerMyShopAddressEditDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/textboxdesign"
+                    android:paddingHorizontal="8dp"
+                    android:hint="Address"
+                    android:paddingVertical="4dp"
+                    android:textColor="@color/black" />
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="Iframe"
+                    android:textColor="@color/md_blue_900" />
+
+                <EditText
+                    android:id="@+id/SellerMyShopIframeEditDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/textboxdesign"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="About Us"
+                    android:textColor="@color/md_blue_900" />
+
+                <EditText
+                    android:id="@+id/SellerMyShopAboutusEditDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/textboxdesign"
+                    android:paddingHorizontal="8dp"
+                    android:hint=""
+                    android:paddingVertical="4dp"
+                    android:textColor="@color/black" />
+                <LinearLayout
+                    android:id="@+id/ecom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="Opening and closing time"
+                    android:textColor="@color/md_blue_900" />
+
+                <EditText
+                    android:id="@+id/SellerMyShopopencloseEditDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/textboxdesign"
+                    android:paddingHorizontal="8dp"
+                    android:hint=""
+                    android:paddingVertical="4dp"
+                    android:textColor="@color/black" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/staybook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="Maximum Room Capacity"
+                    android:textColor="@color/md_blue_900" />
+
+                <EditText
+                    android:id="@+id/SellerMyShopMaxRoomEditDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_margin="4dp"
+                    android:inputType="number"
+                    android:background="@drawable/textboxdesign"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:textColor="@color/black" />
+                </LinearLayout>>
+
+
+                <Button
+                    android:id="@+id/SellerMyShopEditDetailsUpdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/sellerdetailsbutton"
+                    android:text="UPDATE"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

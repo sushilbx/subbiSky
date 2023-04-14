@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cell_shape"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/sellerhotelimage1"
+                android:layout_width="70dp"
+                android:layout_height="90dp"
+                android:padding="2dp"
+                android:src="@drawable/subbiskylogo" />
+
+            <ImageView
+                android:id="@+id/sellerhotelimage2"
+                android:layout_width="70dp"
+                android:layout_height="90dp"
+                android:padding="2dp"
+                android:src="@drawable/subbiskylogo" />
+
+            <ImageView
+                android:id="@+id/sellerhotelimage3"
+                android:layout_width="70dp"
+                android:layout_height="90dp"
+                android:padding="2dp"
+                android:src="@drawable/subbiskylogo" />
+
+            <ImageView
+                android:id="@+id/sellerhotelimage4"
+                android:layout_width="70dp"
+                android:layout_height="90dp"
+                android:src="@drawable/subbiskylogo" />
+
+            <ImageView
+                android:id="@+id/sellerhotelimage5"
+                android:layout_width="70dp"
+                android:layout_height="90dp"
+                android:padding="2dp"
+                android:src="@drawable/subbiskylogo" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/sellerhotelname"
+            android:layout_width="120dp"
+            android:layout_height="90dp"
+            android:layout_weight="3"
+            android:background="@drawable/cell_shape"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text=" "
+            android:textColor="#000"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/sellerhotelprice"
+            android:layout_width="120dp"
+            android:layout_height="90dp"
+            android:layout_weight="3"
+            android:background="@drawable/cell_shape"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text=" "
+            android:textColor="#000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/sellerhotelstatus"
+            android:layout_width="120dp"
+            android:layout_height="90dp"
+            android:layout_weight="3"
+            android:background="@drawable/cell_shape"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text=" "
+            android:textColor="#000"
+            android:textSize="14sp" />
+
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="90dp"
+            android:background="@drawable/cell_shape"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/edithotellist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/edit"
+                android:text="status"
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/deletehotellist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/delete"
+                android:text="status"
+                android:textColor="#000"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

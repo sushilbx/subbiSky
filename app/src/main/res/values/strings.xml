@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">SubbiSky</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="homeFragmentText1">About Us
+Welcome to Subbisky!
+Your No 1 reliable and trustworthy source for all your Ecommerce and Digital Marketing needs. We are
+dedicated to give the very best of our services. We
+mainly focus on our clients needs and provide various
+marketing strategies.\n
+Our company was started as a COORG DIAL in 2009.
+From the first month itself, our company gained huge
+success and was able to double its sales in a month. We
+have come across so many years, yet our company is still
+leading in every Digital Marketing aspect. We have
+recently established into E-commerce in Kodagu and
+getting success. We implement the best digital
+marketing strategies and techniques to grow our client’s
+business. We work professionally with marketing
+analysis and follow the marketing trends and provide
+uniqueness in our work.\n
+We hereby, ensure that all the needs of our clients are
+fulfilled and up to their satisfaction.\n
+We hope you enjoy Kodagu’s No.1 best Digital marketing
+and E-commerce services. </string>
+    <string name="homeFragmentText2">It is a long established fact that a reader will be
+distracted by the readable content of a page when
+looking at its layout. The point of using Lorem
+Ipsum is that it has a more-or-less normal
+distribution of letters, as opposed to using ‘Content
+here, content here’, making it look like readable
+English.</string>
+    <string name="homeFragmentText3">There are many variations of passages of Lorem
+Ipsum available, but the majority have suffered
+alteration in some form, by injected humour.</string>
+    <string name="homeFragmentText4">If you are going to use a passage of Lorem Ipsum,
+you need to be sure there is not anything
+‘embarrassing hidden in the middle of text.</string>
+    <string name="homeFragmentText5">Imagine you have made your presence online
+through a local online directory, but your
+competitors have.</string>
+    <string name="homeFragmentText6">Advertising your business to area has many
+advantages. For local businessmen, it is an
+opportunity.</string>
+
+    <string name="homeFragmentText7">Your local business too needs brand
+management and image making. As you know
+the local market.</string>
+    <string name="homeFragmentText8">By Submitting Form, you agree to the Terms and
+Conditions and Privacy Policy. You also agree to
+receive product-related emails.</string>
+    <string name="contactUs_subTitle1">Local directory is the smartest way to find the best service for all your works</string>
+
+    <string name="dashboard_home_subTitle1">explore some of the best business from around the world from our partners and friends.</string>
+
+    <string-array name="bedType">
+        <item>Queen Size</item>
+        <item>King Size</item>
+    </string-array>
+
+    <string-array name="status">
+        <item>Active</item>
+        <item>Inactive</item>
+    </string-array>
+
+    <string-array name="ShopCategory">
+        <item>Shop</item>
+    </string-array>
+    <string-array name="OrderStatus">
+        <item>Booked</item>
+        <item>Completed</item>
+    </string-array>
+    <string-array name="EcomCheckoutType">
+        <item>Delivery</item>
+        <item>Take Away</item>
+    </string-array>
+    <string-array name="Reviews">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+</resources>

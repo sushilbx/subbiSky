@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Quotes"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Message*"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"/>
+    <EditText
+        android:id="@+id/message"
+        android:hint="Type here"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/profile_bg">
+
+    </EditText>
+    <TextView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Answer*"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"/>
+
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status*"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:visibility="gone"
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:checked="false"
+                android:text="Active"
+                android:textSize="16dp" />
+
+            <RadioButton
+                android:id="@+id/radioInActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:checked="false"
+                android:layout_marginLeft="10dp"
+                android:text="Inactive"
+                android:textSize="16dp" />
+        </RadioGroup>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/createbtn"
+        android:layout_margin="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create"
+        android:textColor="@color/white"
+        android:background="@color/brand_main_3">
+
+    </Button>
+
+</LinearLayout>

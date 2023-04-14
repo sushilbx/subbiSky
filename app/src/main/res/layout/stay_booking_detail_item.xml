@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:paddingBottom="20dp"
+        android:layout_marginBottom="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:padding="4dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp">
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="5dp"
+                        android:scaleType="fitXY"
+                        android:padding="4dp"
+                        android:src="@drawable/foods" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/hotelName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@id/imageView"
+                        android:text="Coorag Restaurant"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:padding="4dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/textViewTitle"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center_vertical"
+                            android:textStyle="bold"
+                            android:text="Amenities:"
+                            android:textColor="@color/black" />
+                        <TextView
+                            android:id="@+id/bathroom"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/textViewTitle"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:drawableLeft="@drawable/tv"
+                            android:layout_marginTop="2dp"
+                            android:text="BathRoom"
+                            android:textSize="12dp"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:padding="4dp">
+                        <TextView
+                            android:id="@+id/food"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="2dp"
+                            android:textSize="12dp"
+                            android:gravity="center_vertical"
+                            android:text="Food"
+                            android:textColor="@color/black"
+                            android:drawableLeft="@drawable/foods" />
+                        <TextView
+                            android:id="@+id/parking"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/textViewTitle"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:layout_marginTop="2dp"
+                            android:text="Parking"
+                            android:gravity="center_vertical"
+                            android:drawableLeft="@drawable/parking"
+                            android:textSize="12dp"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:padding="4dp">
+                        <TextView
+                            android:id="@+id/restaurant"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/textViewTitle"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="2dp"
+                            android:textSize="12dp"
+                            android:gravity="center_vertical"
+                            android:text="Restaurant"
+                            android:drawableLeft="@drawable/tv"
+                            android:textColor="@color/black" />
+                        <TextView
+                            android:id="@+id/spa"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/textViewTitle"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:layout_marginTop="2dp"
+                            android:text="Spa"
+                            android:gravity="center_vertical"
+                            android:drawableLeft="@drawable/spa"
+                            android:textSize="12dp"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:padding="4dp">
+                        <TextView
+                            android:id="@+id/swimmingpool"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/textViewTitle"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="2dp"
+                            android:textSize="12dp"
+                            android:gravity="center_vertical"
+                            android:drawableLeft="@drawable/tv"
+                            android:text="Swimming Pool"
+                            android:textColor="@color/black" />
+                        <TextView
+                            android:id="@+id/tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/textViewTitle"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/tv"
+                            android:layout_marginTop="2dp"
+                            android:text="TV"
+                            android:gravity="center_vertical"
+                            android:textSize="12dp"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:padding="4dp">
+                        <TextView
+                            android:id="@+id/wifi"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/textViewTitle"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="2dp"
+                            android:textSize="12dp"
+                            android:gravity="center_vertical"
+                            android:drawableLeft="@drawable/wifi"
+                            android:text="WIFI"
+                            android:textColor="@color/black" />
+                        <TextView
+                            android:id="@+id/ac"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/textViewTitle"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:drawableLeft="@drawable/ac"
+                            android:layout_marginTop="2dp"
+                            android:text="Air Conditioner"
+                            android:textSize="12dp"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/adultsRoom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@id/imageView"
+                        android:text="Per Adult/Night:3000 Rs"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:id="@+id/bedSize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@id/imageView"
+                        android:text="King Size Bed -500sqft"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/imageView"
+                        android:text="Price Description:"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:padding="4dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="2dp"
+                            android:textSize="12dp"
+                            android:text="Check-in"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/checkInTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/textViewTitle"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:layout_marginTop="2dp"
+                            android:text="12:00PM"
+                            android:textSize="12dp"
+                            android:textColor="@color/black" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/grey"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/textViewTitle"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="2dp"
+                                android:textSize="12dp"
+                                android:text="Check-out"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/checkOutTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/textViewTitle"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:layout_marginTop="2dp"
+                                android:text="11:00 AM"
+                                android:textSize="12dp"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="4dp">
+
+                <Button
+                    android:id="@+id/bookNow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:padding="5dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:background="@drawable/button_quota"
+                    android:text="Book Now"
+                    android:drawableStart="@drawable/call"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:drawablePadding="20sp"
+                    android:drawableLeft="@drawable/call" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

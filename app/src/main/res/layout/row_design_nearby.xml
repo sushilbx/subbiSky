@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        android:padding="4dp">
+    <LinearLayout
+        android:id="@+id/nextPageintent"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:padding="4dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgs"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/foods"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="2dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="4dp">
+            <TextView
+                android:id="@+id/texthead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/imgs"
+                android:text="Coorag Restaurant"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/texthead"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/imgs"
+                android:text="Malikeri Kodagu"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+    </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-55dp"
+        android:gravity="end"
+        android:orientation="vertical"
+        android:padding="4dp">
+        <TextView
+            android:id="@+id/textViewRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="5dp"
+            android:text="4.7"
+            android:textSize="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

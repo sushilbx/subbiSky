@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.webdigital.subbisky">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/subbiskylogo"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name=".activity.StaybookroomaddingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SellerquoteCreateActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.StayBookingPayActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.StayBookingDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ResetPasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ForgotPasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SearchActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.PickUpDropCheckOutPage"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ServicesCheckOutPage"
+            android:exported="true" />
+        <activity
+            android:name=".activity.EcomProductCheckOutPage"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SellerDeliveryStatusUpdateActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.CustomerOrderDescriptionActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.CustomerBookingList"
+            android:exported="true" />
+        <activity
+            android:name=".activity.EmptyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.CartListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SellerServicesDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.FilteredCategoryProductsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ServiceDetailsPageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SellerOrderDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SellerProductListEditActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SellerCreateProductActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SellerProductListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SellerHotelListEditActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SellerCreateHotelDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SellerCategoryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SellerMyShopBankDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SellerMyShopEditProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SellerMyShopDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SellerShopDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.OTPVerifyActivity"
+            android:exported="true" /> <!-- <activity -->
+        <!-- android:name=".activity.OtpActivity" -->
+        <!-- android:exported="true" /> -->
+        <activity
+            android:name=".activity.SellerQuotesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SellerWalletActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SellerOrderActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SellerHotelActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SellerMyShopActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SellerDashBoardActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.EcomProductDetailActivity"
+            android:exported="true" /> <!-- <activity -->
+        <!-- android:name=".activity.AddToCartActivity" -->
+        <!-- android:exported="true" /> -->
+        <activity
+            android:launchMode="singleTask"
+            android:name=".activity.SubServiceBySlugActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SubServicesListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SignupSellerActivity"
+            android:exported="true" /> <!-- <activity -->
+        <!-- android:name=".activity.LoginSeller" -->
+        <!-- android:exported="true" /> -->
+        <activity
+            android:name=".activity.LogoutActivity"
+            android:exported="true" />
+        <activity android:name=".activity.StayBookingDatesActivity"
+            android:exported="true" />
+        <activity android:name=".activity.StayBookingActivity"
+            android:exported="true" />
+        <activity android:name=".activity.StayBookingListActivity"
+            android:exported="true" />
+        <activity android:name=".activity.PickDropPayActivity"
+            android:exported="true" />
+        <activity android:name=".activity.PickDropGoodsActivity"
+            android:exported="true" />
+        <activity android:name=".activity.PickAndDropDescriptionActivity"
+            android:exported="true" />
+        <activity android:name=".activity.PickAndDropActivity"
+            android:exported="true" />
+        <activity android:name=".activity.PickupAndDropListActivity"
+            android:exported="true" />
+        <activity android:name=".activity.ServicePayActivity"
+            android:exported="true" />
+        <activity android:name=".activity.ServiceManpowerActivity"
+            android:exported="true" />
+        <activity android:name=".activity.ServiceDescriptionActivity"
+            android:exported="true" />
+        <activity android:name=".activity.ServiceActivity"
+            android:exported="true" />
+        <activity android:name=".activity.ServiceListActivity"
+            android:exported="true" />
+        <activity android:name=".activity.AddToCartDescription"
+            android:exported="true" />
+        <activity android:name=".activity.AddToCartRestaurantActivity"
+            android:exported="true" />
+        <activity android:name=".activity.RestaurantActivity" android:exported="true"  />
+        <activity android:name=".activity.LoginWithActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.FoodListActivity"
+            android:exported="true" />
+        <activity android:name=".activity.ContactUsActivity"
+            android:exported="true" />
+        <activity android:name=".activity.AboutUsActivity"
+            android:exported="true" />
+        <activity android:name=".activity.ChangePasswordActivity"
+            android:exported="true" />
+        <activity android:name=".activity.EditProfileActivity"
+            android:exported="true" />
+        <activity android:name=".activity.MyBookingDetailsActivity"
+            android:exported="true" />
+        <activity android:name=".activity.MyBookingActivity"
+            android:exported="true" />
+        <activity android:name=".activity.MyServiceActivity"
+            android:exported="true" />
+        <activity android:name=".activity.MyOrderActivity"
+            android:exported="true" />
+        <activity android:name=".activity.ProfileActivity"
+            android:exported="true" />
+        <activity android:name=".activity.DashboradActivity"
+            android:exported="true" />
+        <activity android:name=".activity.Login"
+            android:exported="true" />
+        <activity android:name=".activity.SignupActivity"
+            android:exported="true" />
+        <activity android:name=".MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

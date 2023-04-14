@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="30dp"
+    android:background="@drawable/textboxdesign"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+    <LinearLayout
+        android:padding="30dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+
+android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_margin="10dp"
+        android:weightSum="2">
+
+
+        <EditText
+
+            android:id="@+id/adults"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+android:gravity="center"
+            android:padding="20dp"
+            android:layout_weight="1"
+            android:hint="Adults"
+
+            android:textSize="13dp"
+
+            android:inputType="number"
+            android:textColor="@color/grey_dark"
+            android:background="@drawable/textboxdesign"
+            android:textColorHint="@color/grey_dark_2_opacity_25" />
+
+        <EditText
+            android:id="@+id/children"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/textboxdesign"
+            android:gravity="center"
+            android:hint="Children(6 to 17)"
+
+            android:inputType="number"
+            android:padding="20dp"
+            android:textColor="@color/grey_dark"
+
+            android:textColorHint="@color/grey_dark_2_opacity_25"
+            android:textSize="13dp" />
+    </LinearLayout>
+    <Button
+        android:layout_weight="1"
+        android:layout_margin="30dp"
+        android:layout_gravity="center"
+        android:id="@+id/dilogaddroom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/buttonfoodlist"
+        android:text="ADD ROOM"
+        android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

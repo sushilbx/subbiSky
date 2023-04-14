@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+
+
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Adults "
+
+            android:textColor="@color/black"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            />
+
+        <EditText
+
+            android:id="@+id/adults"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:digits="0123456"
+            android:layout_weight="1"
+            android:hint=""
+
+            android:textSize="13dp"
+
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/grey_dark"
+            android:background="@drawable/textboxdesign"
+            android:textColorHint="@color/grey_dark_2_opacity_25" /></LinearLayout>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+
+
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="childrens "
+
+        android:textColor="@color/black"
+        android:layout_marginLeft="5dp"
+        android:textStyle="bold"
+        />
+        <EditText
+android:maxLength="1"
+            android:digits="0123456"
+            android:id="@+id/children"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_weight="1"
+  android:hint=""
+
+            android:textSize="13dp"
+
+            android:inputType="number"
+            android:textColor="@color/grey_dark"
+            android:background="@drawable/textboxdesign"
+
+            android:textColorHint="@color/grey_dark_2_opacity_25" />
+</LinearLayout>
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+
+
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text=" "
+
+            android:textColor="@color/black"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+
+            android:id="@+id/delt"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Remove "
+            android:background="@drawable/buttonfoodlist"
+
+
+            android:textColor="@color/white"
+
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    </LinearLayout>
+

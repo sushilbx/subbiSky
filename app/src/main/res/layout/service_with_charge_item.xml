@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/servicedetailsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:background="@drawable/border_service_desciption"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/serviceListTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Coorag courier Services"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:gravity="left" />
+        <TextView
+            android:id="@+id/serviceChargeAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u20B9 500"
+            android:textSize="16sp"
+            android:textColor="@color/md_blue_900"
+            android:gravity="right" />
+        <TextView
+            android:id="@+id/servicechargePay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Click here for Pay Amount"
+            android:textSize="14sp"
+            android:textColor="@color/md_blue_900"
+            android:gravity="left" />
+    </LinearLayout>
+</RelativeLayout>
