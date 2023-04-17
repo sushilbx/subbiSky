@@ -60,7 +60,7 @@ public class TrendindAdapter extends  RecyclerView.Adapter<TrendindAdapter.MyVie
                    // type = trendingList.getType();
 
                     Log.e("serviceId",serviceId);
-                    Log.e("type",type);
+                    Log.e("type",""+type);
                     Log.e("serviceName",serviceName);
                     Intent intent=new Intent(context, StaybookroomaddingActivity.class);
 //                    intent.putExtra("serviceName",serviceName);

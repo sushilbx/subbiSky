@@ -43,11 +43,12 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class ExploreCityAdapter extends  RecyclerView.Adapter<ExploreCityAdapter.MyViewHolder> {
+public class ExploreCityAdapter extends RecyclerView.Adapter<ExploreCityAdapter.MyViewHolder> {
     public List<ExplorecitylistResponse.City> cityList = new ArrayList<>();
     public Context context;
 
     int position;
+
     public ExploreCityAdapter(List<ExplorecitylistResponse.City> list, Context context) {
         this.cityList = list;
         this.context = context;
@@ -60,30 +61,28 @@ public class ExploreCityAdapter extends  RecyclerView.Adapter<ExploreCityAdapter
     }
 
     @Override
-    public void onBindViewHolder(final MyViewHolder holder,final int position) {
-        holder.name.setText(cityList.get(position).getName().trim());
-        Glide.with(holder.image)
-                .load(cityList.get(position).getImage()).fitCenter().into(holder.image);
+    public void onBindViewHolder(final MyViewHolder holder, final int position) {
+        holder.name.setText(cityList.get(position).getName());
+        if (cityList.get(position).getImage().isEmpty()) {
+            Glide.with(holder.image).load("https://s3.india.com/travel/wp-content/uploads/2015/05/coorg.jpg").into(holder.image);
+        }
+        Glide.with(holder.image).load(cityList.get(position).getImage()).into(holder.image);
 
 
-        holder.detail.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               HomeFragment. cityname=cityList.get(position).getName().toString();
-                                            AppCompatActivity activity = (AppCompatActivity) context;
-                            Fragment fm = new HomeFragment();
-                            activity.getSupportFragmentManager().beginTransaction().addToBackStack(null).
-                                    replace(R.id.nav_host_fragment, fm).commit();
-
-
+                HomeFragment.cityname = cityList.get(position).getName().toString();
+                AppCompatActivity activity = (AppCompatActivity) context;
+                Fragment fm = new HomeFragment();
+                activity.getSupportFragmentManager().beginTransaction().addToBackStack(null).
+                        replace(R.id.nav_host_fragment, fm).commit();
 
 
             }
         });
 
     }
-
-
 
 
     @Override
@@ -96,13 +95,13 @@ public class ExploreCityAdapter extends  RecyclerView.Adapter<ExploreCityAdapter
         TextView name;
         ImageView image;
         RelativeLayout detail;
+
         MyViewHolder(View itemView) {
             super(itemView);
 
-            name=itemView.findViewById(R.id.name);
-            image=itemView.findViewById(R.id.image);
-           detail=itemView.findViewById(R.id.detail);
-
+            name = itemView.findViewById(R.id.name);
+            image = itemView.findViewById(R.id.image);
+           // detail = itemView.findViewById(R.id.detail);
 
 
         }

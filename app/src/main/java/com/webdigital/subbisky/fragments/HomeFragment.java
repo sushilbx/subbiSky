@@ -106,8 +106,8 @@ public class HomeFragment extends Fragment {
         /* Image list*/
         //getting the recyclerview from xml
         recyclerViewImg=view.findViewById(R.id.explorecityre);
-        recyclerViewImg.setHasFixedSize(true);
-        recyclerViewImg.setLayoutManager(new GridLayoutManager(getContext(),2));
+      /*  recyclerViewImg.setHasFixedSize(true);
+        recyclerViewImg.setLayoutManager(new GridLayoutManager(getContext(),2));*/
 
 
         Call<ExplorecitylistResponse> call =  RetrofitClient.getInstance().getApi().explorecity();
@@ -118,13 +118,12 @@ public class HomeFragment extends Fragment {
             {
                 if(response.code() == 200)
                 {
-                    if(response.body() != null)
-                    {
-                        ExploreCityAdapter faqAdapter = new ExploreCityAdapter((List<ExplorecitylistResponse.City>) response.body().getCities(),getActivity());
+
+                        ExploreCityAdapter faqAdapter = new ExploreCityAdapter(response.body().getCities(), getContext());
                         recyclerViewImg.setAdapter(faqAdapter);
 
                         Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
-                    }
+
                 }
 
 
