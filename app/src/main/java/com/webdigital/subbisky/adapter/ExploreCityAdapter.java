@@ -63,9 +63,7 @@ public class ExploreCityAdapter extends RecyclerView.Adapter<ExploreCityAdapter.
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
         holder.name.setText(cityList.get(position).getName());
-        if (cityList.get(position).getImage().isEmpty()) {
-            Glide.with(holder.image).load("https://s3.india.com/travel/wp-content/uploads/2015/05/coorg.jpg").into(holder.image);
-        }
+
         Glide.with(holder.image).load(cityList.get(position).getImage()).into(holder.image);
 
 
