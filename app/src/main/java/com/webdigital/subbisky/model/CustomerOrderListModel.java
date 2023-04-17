@@ -1,9 +1,92 @@
 package com.webdigital.subbisky.model;
 
+import java.util.Date;
 import java.util.List;
 
 public class CustomerOrderListModel {
-    private String message;
+    public String type;
+    public String message;
+    public boolean success;
+    public int statusCode;
+    public Order order;
+
+
+    public class Order {
+        public int id;
+        public String order_id;
+        public int seller_id;
+        public int user_id;
+        public String name;
+        public String phone;
+        public String email;
+        public Object state;
+        public String city_id;
+        public String pincode;
+        public String landmark;
+        public String address;
+        public String payable_price;
+        public int commision_amount;
+        public int comission_percentage;
+        public int payable_amount_seller;
+        public Object payment_id;
+        public Object razorpay_order_id;
+        public int captured;
+        public String status;
+        public String payment_mode;
+        public Object delivered_date;
+        public Object sellerService_id;
+        public Object hotel_from_date;
+        public Object hotel_to_date;
+        public Object hotel_adult_no;
+        public Object hotel_children_no;
+        public Object childrenExtraCharge;
+        public Object adultExtraCharge;
+        public Object hotel_room_no;
+        public Object hotel_nos_of_days;
+        public Customer_Hotel_id hotel_id;
+        public Object appointment_date;
+        public Object appointment_time;
+        public String takeAway;
+        public Date created_at;
+        public Date updated_at;
+        public List<ListProduct> list;
+    }
+
+    public class ListProduct {
+        public int id;
+        public int order_id;
+        public ProductId product_id;
+        public int mrp_price;
+        public String selling_price;
+        public String quantity;
+        public Object unit;
+        public Date created_at;
+        public Date updated_at;
+    }
+
+    public class ProductId {
+        public int id;
+        public int category_id;
+        public int seller_id;
+        public String name;
+        public String image;
+        public String description;
+        public int stock;
+        public int mrp_price;
+        public int selling_price;
+        public String unit;
+        public String status;
+        public Date created_at;
+        public Date updated_at;
+    }
+
+    public class Customer_Hotel_id {
+        private int id;
+        public String seller_id, name, description, price, checkin_time, checkout_time, image, google_location, status, amenities, bed_size, room_square_feet, available_rooms, created_at, updated_at, imageTwo, imageThree, imageFour, childrenExtra, adultExtra, imageFive, from_block, to_block, roomCapacity, priceDescription;
+    }
+}
+
+   /* private String message;
     private Boolean success;
     private Integer statusCode;
     private OrderedProductDetail order;
@@ -730,5 +813,5 @@ public class CustomerOrderListModel {
                 this.priceDescription = priceDescription;
             }
         }
-    }
-}
+    }*/
+

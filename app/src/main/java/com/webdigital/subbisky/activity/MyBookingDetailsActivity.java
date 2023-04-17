@@ -64,22 +64,22 @@ public class MyBookingDetailsActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<CustomerOrderListModel> call, Response<CustomerOrderListModel> response) {
                 if (response.isSuccessful()){
-                    bookingId.setText("Booking Id :"+response.body().getOrder().getOrder_id());
-                    hotel.setText("Hotel :"+response.body().getOrder().getHotel_id().getName());
-                    checkInTime.setText("Checkin Time :"+response.body().getOrder().getHotel_id().getCheckin_time());
-                    checkOutTime.setText("Checkout Time :"+response.body().getOrder().getHotel_id().getCheckout_time());
-                    numOfAdult.setText("Nos of Adult :"+response.body().getOrder().getHotel_adult_no());
-                    numOfChildren.setText("Nos of Children :"+response.body().getOrder().getHotel_children_no());
-                    numOfRoom.setText("Nos of Room :"+response.body().getOrder().getHotel_room_no());
-                    adultExtraCharge.setText("Adult Extra Charge :"+response.body().getOrder().getAdultExtraCharge());
-                    childrenExtraCharge.setText("Children Extra Charge :"+response.body().getOrder().getChildrenExtraCharge());
-                    amountPaid.setText("Amount Paid :"+response.body().getOrder().getPayable_price());
-                    status.setText("Status :"+response.body().getOrder().getStatus());
+                    bookingId.setText("Booking Id :"+response.body().order.order_id);
+                    hotel.setText("Hotel :"+response.body().order.hotel_id.name);
+                    checkInTime.setText("Checkin Time :"+response.body().order.hotel_id.checkin_time);
+                    checkOutTime.setText("Checkout Time :"+response.body().order.hotel_id.checkout_time);
+                    numOfAdult.setText("Nos of Adult :"+response.body().order.hotel_adult_no);
+                    numOfChildren.setText("Nos of Children :"+response.body().order.hotel_children_no);
+                    numOfRoom.setText("Nos of Room :"+response.body().order.hotel_room_no);
+                    adultExtraCharge.setText("Adult Extra Charge :"+response.body().order.adultExtraCharge);
+                    childrenExtraCharge.setText("Children Extra Charge :"+response.body().order.childrenExtraCharge);
+                    amountPaid.setText("Amount Paid :"+response.body().order.payable_price);
+                    status.setText("Status :"+response.body().order.status);
                     locate.setText("Locate :Get Direction");
                     locate.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            String address = response.body().getOrder().getHotel_id().getGoogle_location();
+                            String address = response.body().order.hotel_id.google_location;
                         }
                     });
                 }

@@ -18,10 +18,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerOrderProductDetailsAdapter  extends RecyclerView.Adapter<CustomerOrderProductDetailsAdapter.customerOrderProductDetailsHolder>{
-    private List<CustomerOrderListModel.OrderedProductDetail.CustomerOrderList> ordersLists = new ArrayList<>();
+    private List<CustomerOrderListModel.ListProduct> ordersLists = new ArrayList<>();
     private Context context;
 
-    public CustomerOrderProductDetailsAdapter(List<CustomerOrderListModel.OrderedProductDetail.CustomerOrderList> ordersLists, Context context) {
+    public CustomerOrderProductDetailsAdapter(List<CustomerOrderListModel.ListProduct> ordersLists, Context context) {
         this.ordersLists = ordersLists;
         this.context = context;
     }
@@ -38,11 +38,11 @@ public class CustomerOrderProductDetailsAdapter  extends RecyclerView.Adapter<Cu
 //        final CustomerOrderListModel.OrderedProductDetail Item = ordersLists.get(position);
 
         Glide.with(holder.itemView)
-                .load(ordersLists.get(position).getProduct_id().getImage()).fitCenter().into(holder.productImage);
-        holder.productName.setText(ordersLists.get(position).getProduct_id().getName());
-        holder.productPrice.setText(ordersLists.get(position).getProduct_id().getSelling_price());
-        holder.productQuantity.setText(ordersLists.get(position).getQuantity());
-        holder.productTotal.setText(ordersLists.get(position).getSelling_price());
+                .load(ordersLists.get(position).product_id.image).into(holder.productImage);
+        holder.productName.setText(ordersLists.get(position).product_id.name);
+        holder.productPrice.setText(ordersLists.get(position).product_id.selling_price);
+        holder.productQuantity.setText(ordersLists.get(position).quantity);
+        holder.productTotal.setText(ordersLists.get(position).selling_price);
     }
 
     @Override

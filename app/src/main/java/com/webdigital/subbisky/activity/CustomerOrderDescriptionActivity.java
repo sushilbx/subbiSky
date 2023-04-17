@@ -104,35 +104,40 @@ TextView produttotal,produtname,produtprice,produtquantity;
             public void onResponse(Call<CustomerOrderListModel> call, Response<CustomerOrderListModel> response) {
                 if (response.isSuccessful()){
 //                    if (response.body()){
-                    orderId.setText("Order Id : "+response.body().getOrder().getOrder_id());
-                    amountPaid.setText("Amount Paid : : "+response.body().getOrder().getPayable_price());
-                    paymentMode.setText("Payment Mode : "+response.body().getOrder().getPayment_mode());
-                    Ostatus.setText("Status : "+response.body().getOrder().getStatus());
-                    takeAway.setText("Take Away : "+response.body().getOrder().getTakeAway());
-                    customer_Name.setText("Name : "+response.body().getOrder().getName());
-                    customer_Email.setText("Email : "+response.body().getOrder().getEmail());
-                    customer_phone.setText("Phone : "+response.body().getOrder().getPhone());
-                    customer_address.setText("Address : "+response.body().getOrder().getAddress());
-                    customer_state.setText("State : "+response.body().getOrder().getLandmark());
-                    customer_city.setText("City : "+response.body().getOrder().getCity_id());
-                    customer_pincode.setText("Pincode : "+response.body().getOrder().getPincode());
-                    produtprice.setText(response.body().getOrder().getList().get(0).getSelling_price());
-                    produtquantity.setText(response.body().getOrder().getList().get(0).getQuantity());
-                    produtname.setText(response.body().getOrder().getList().get(0).getProduct_id().getName());
-                    produttotal.setText(response.body().getOrder().getPayable_price());
-                    Picasso.get().load(response.body().getOrder().getList().get(0).getProduct_id().getImage()).into(produtimg);
+                    orderId.setText("Order Id : "+response.body().order.order_id);
+                    amountPaid.setText("Amount Paid : : "+response.body().order.payable_price);
+                    paymentMode.setText("Payment Mode : "+response.body().order.payment_mode);
+                    Ostatus.setText("Status : "+response.body().order.status);
+                    takeAway.setText("Take Away : "+response.body().order.takeAway);
+                    customer_Name.setText("Name : "+response.body().order.name);
+                    customer_Email.setText("Email : "+response.body().order.email);
+                    customer_phone.setText("Phone : "+response.body().order.phone);
+                    customer_address.setText("Address : "+response.body().order.address);
+                    customer_state.setText("State : "+response.body().order.landmark);
+                    customer_city.setText("City : "+response.body().order.city_id);
+                    customer_pincode.setText("Pincode : "+response.body().order.pincode);
+                    produttotal.setText(response.body().order.payable_price);
+                    if (response.body().order.list.size()==0){
+                        produtprice.setText("Product List Not Available");
+                    }else{
+                    Picasso.get().load(response.body().order.list.get(0).product_id.image).into(produtimg);
+                   produtprice.setText(response.body().order.list.get(0).selling_price);
+                    produtquantity.setText(response.body().order.list.get(0).quantity);
+                    produtname.setText(response.body().order.list.get(0).product_id.name);}
+
+
 
 //                    customerOrderProductDetailsAdapter = new CustomerOrderProductDetailsAdapter((List<CustomerOrderListModel.OrderedProductDetail.CustomerOrderList>) response.body().getOrder().getList(),CustomerOrderDescriptionActivity.this);
 //                    productsDetailsRecycler.setAdapter(customerOrderProductDetailsAdapter);
 
-                    Toast.makeText(CustomerOrderDescriptionActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CustomerOrderDescriptionActivity.this, response.body().message, Toast.LENGTH_SHORT).show();
 
 //                           refreshPage();
 
 //                }
                 }
                 else {
-                    Toast.makeText(CustomerOrderDescriptionActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CustomerOrderDescriptionActivity.this, response.body().message, Toast.LENGTH_SHORT).show();
 
                 }
             }
