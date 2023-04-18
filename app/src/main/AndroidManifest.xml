@@ -216,6 +216,12 @@
             android:exported="true" />
         <activity android:name=".MainActivity"
             android:exported="true" />
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+
+            android:value="rzp_test_1gCZlskFzwqGnN"/>
+        <!-- android:value="rzp_live_Au4hmecg8VDUOt"-->
     </application>
 
 </manifest>

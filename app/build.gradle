@@ -1,16 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 32
+    compileSdkVersion 33
 
 
     defaultConfig {
         applicationId "com.webdigital.subbisky"
         minSdkVersion 24
-        targetSdkVersion 32
-        versionCode 21
-        versionName "2.0"
-        multiDexEnabled true
+        targetSdkVersion 33
+        versionCode 22
+        versionName "2.0.1"
+      //  multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -79,11 +79,11 @@ dependencies {
     ///////////////////////////Manual Lib////////////////////////////
     implementation 'com.hbb20:ccp:2.5.3'
     implementation 'com.google.maps.android:android-maps-utils:0.4'
-    implementation 'com.google.android.gms:play-services-auth:20.3.0'
+    implementation 'com.google.android.gms:play-services-auth:20.5.0'
     implementation 'com.google.android.gms:play-services-maps:18.1.0'
     implementation 'com.google.android.gms:play-services-places:17.0.0'
     implementation 'com.google.android.gms:play-services-location:21.0.1'
-    implementation 'com.google.android.libraries.places:places:2.7.0'
+    implementation 'com.google.android.libraries.places:places:3.1.0'
 
     implementation 'androidx.multidex:multidex:2.0.1'
 
@@ -92,7 +92,7 @@ dependencies {
    // implementation 'com.payumoney.core:payumoney-sdk:7.6.1'
 
     //razorpay
-    implementation 'com.razorpay:checkout:1.6.20'
+    implementation 'com.razorpay:checkout:1.6.26'
 //customcalender
     implementation 'org.naishadhparmar.zcustomcalendar:zcustomcalendar:1.0.1'
 

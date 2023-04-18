@@ -1,6 +1,7 @@
 package com.webdigital.subbisky.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -53,19 +54,19 @@ import org.json.JSONObject;
 
 public class EcomProductCheckOutPage extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    LinearLayout linerLayoutBack,deliveryVisible;
+    LinearLayout linerLayoutBack, deliveryVisible;
     TextView ecomCheckoutdate, ecomCheckouttime, ecomCheckoutAmount, tdate, ttime, deliveryCharge;
-    EditText ecomCheckoutName, ecomCheckoutEmail, ecomCheckoutPhone, ecomCheckoutPincode, ecomCheckoutLandmark, ecomCheckoutAddress,ecomCheckoutcity;
+    EditText ecomCheckoutName, ecomCheckoutEmail, ecomCheckoutPhone, ecomCheckoutPincode, ecomCheckoutLandmark, ecomCheckoutAddress, ecomCheckoutcity;
     Button ecomCheckoutBtn;
-    int deliverychargeammount=0,amount=0;
-    String customerType,  sellerId;
-
+    int deliverychargeammount = 0, amount = 0;
+    String customerType;
+    String sellerId = "";
     List<String> cityList;
     String[] cityListSpinner;
     int[] cityListTitleId;
     int cListId;
     Spinner CityList, ecomCheckoutType;
-    Session session,session1;
+    Session session, session1;
     String cityId, type = "";
     String takeAway = "", payment_mode = "";
     RadioGroup payment_type;
@@ -73,8 +74,8 @@ public class EcomProductCheckOutPage extends AppCompatActivity implements Adapte
     String name, email, phone, pincode, landmark, address, city, totalAmt;
 
 
-   // PayUmoneySdkInitializer.PaymentParam.Builder builder = new PayUmoneySdkInitializer.PaymentParam.Builder();
-   // PayUmoneySdkInitializer.PaymentParam paymentParam = null;
+    // PayUmoneySdkInitializer.PaymentParam.Builder builder = new PayUmoneySdkInitializer.PaymentParam.Builder();
+    // PayUmoneySdkInitializer.PaymentParam paymentParam = null;
 
     ////String payUMId = "7455888";//7440824
     //String payUKey = "GpUr6trc"; //Production//lRPTChYM
@@ -106,9 +107,9 @@ public class EcomProductCheckOutPage extends AppCompatActivity implements Adapte
         offlineRadioBtn = findViewById(R.id.offlineRadioBtn);
         getecomData();
         getDeliveryCharge();
-
-       // deliveryVisible.setVisibility(View.GONE);
-       // CityListSpinner();
+        Checkout.preload(this);
+        // deliveryVisible.setVisibility(View.GONE);
+        // CityListSpinner();
 
         getecomData();
         getDeliveryCharge();
@@ -118,8 +119,8 @@ public class EcomProductCheckOutPage extends AppCompatActivity implements Adapte
         ecomCheckoutType.setOnItemSelectedListener(this);
         Intent intent = getIntent();
         amount = Integer.valueOf(intent.getStringExtra("amount"));
-        sellerId = intent.getStringExtra("sellerId");
-        Log.e("sellerId", sellerId);
+        sellerId = getIntent().getStringExtra("sellerId");
+        Log.e("sellerId", "" + sellerId);
         txnId = formatter.format(date);
 
 
@@ -170,15 +171,15 @@ public class EcomProductCheckOutPage extends AppCompatActivity implements Adapte
         ecomCheckoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               name = ecomCheckoutName.getEditableText().toString();
+                name = ecomCheckoutName.getEditableText().toString();
                 email = ecomCheckoutEmail.getEditableText().toString();
-               phone = ecomCheckoutPhone.getEditableText().toString();
+                phone = ecomCheckoutPhone.getEditableText().toString();
                 pincode = ecomCheckoutPincode.getEditableText().toString();
                 landmark = ecomCheckoutLandmark.getEditableText().toString();
                 address = ecomCheckoutAddress.getEditableText().toString();
                 city = ecomCheckoutcity.getEditableText().toString();
                 //city = String.valueOf(cListId);
-              // time = serviceCheckouttime.getEditableText().toString();
+                // time = serviceCheckouttime.getEditableText().toString();
                 totalAmt = String.valueOf(amount);
                 if (!name.isEmpty() && !email.isEmpty() && !phone.isEmpty() && !pincode.isEmpty() && !landmark.isEmpty() && !address.isEmpty() && !totalAmt.isEmpty() && !city.isEmpty()) {
                     if (payment_mode.equals("Offline")) {
@@ -188,8 +189,7 @@ public class EcomProductCheckOutPage extends AppCompatActivity implements Adapte
 
                         submitPayment();
 
-                    }
-                    else {
+                    } else {
                         checkout();
                     }
 
@@ -202,10 +202,9 @@ public class EcomProductCheckOutPage extends AppCompatActivity implements Adapte
                         ecomCheckoutPhone.setError("Please fill this field!");
                     } else if (pincode.isEmpty()) {
                         ecomCheckoutPincode.setError("Please fill this field!");
-                    }
-                    else if (city.isEmpty()) {
+                    } else if (city.isEmpty()) {
                         ecomCheckoutcity.setError("Please fill this field!");
-                    }else if (landmark.isEmpty()) {
+                    } else if (landmark.isEmpty()) {
                         ecomCheckoutLandmark.setError("Please fill this field!");
                     } else if (address.isEmpty()) {
                         ecomCheckoutAddress.setError("Please fill this field!");
@@ -215,29 +214,25 @@ public class EcomProductCheckOutPage extends AppCompatActivity implements Adapte
                 }
 
 
-           }
+            }
         });
 
-        ecomCheckoutType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
-        {
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
-            {
+        ecomCheckoutType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedItem = parent.getItemAtPosition(position).toString();
-                if(selectedItem.equals("Delivery"))
-                {
+                if (selectedItem.equals("Delivery")) {
                     deliveryVisible.setVisibility(View.VISIBLE);
-                    amount=amount+deliverychargeammount;
+                    amount = amount + deliverychargeammount;
                     ecomCheckoutAmount.setText("Rs: " + amount);
 
-                }
-                else{
+                } else {
                     deliveryVisible.setVisibility(View.GONE);
-                    amount=amount-deliverychargeammount;
+                    amount = amount - deliverychargeammount;
                     ecomCheckoutAmount.setText("Rs: " + amount);
                 }
             } // to close the onItemSelected
-            public void onNothingSelected(AdapterView<?> parent)
-            {
+
+            public void onNothingSelected(AdapterView<?> parent) {
 
             }
         });
@@ -259,7 +254,7 @@ public class EcomProductCheckOutPage extends AppCompatActivity implements Adapte
         Checkout checkout = new Checkout();
 
         // set your id as below
-        checkout.setKeyID("rzp_live_Au4hmecg8VDUOt");
+        //   checkout.setKeyID("rzp_live_Au4hmecg8VDUOt");
 
         // set image
 
@@ -298,8 +293,8 @@ public class EcomProductCheckOutPage extends AppCompatActivity implements Adapte
     private void getDeliveryCharge() {
         session = new Session(EcomProductCheckOutPage.this);
         String auth = "Bearer " + session.getUserDetails().get(Session.TOKEN);
-
-        Call<DeliveryChargeModel> call = RetrofitClient.getInstance().getApi().deliveryCharge(auth, sellerId);
+        Log.e("sellerIdskkkk", "" + sellerId);
+        Call<DeliveryChargeModel> call = RetrofitClient.getInstance().getApi().deliveryCharge(auth, "" + sellerId);
         call.enqueue(new Callback<DeliveryChargeModel>() {
             @Override
             public void onResponse(Call<DeliveryChargeModel> call, Response<DeliveryChargeModel> response) {
@@ -309,8 +304,8 @@ public class EcomProductCheckOutPage extends AppCompatActivity implements Adapte
                         deliveryVisible.setVisibility(View.VISIBLE);
                         deliveryCharge.setText(response.body().getCharge());
                         takeAway = "Yes";
-                        deliverychargeammount=Integer.valueOf(response.body().getCharge());
-                        amount=amount+deliverychargeammount;
+                        deliverychargeammount = Integer.valueOf(response.body().getCharge());
+                        amount = amount + deliverychargeammount;
                         ecomCheckoutAmount.setText("Rs: " + amount);
                         Log.e("takeAway1", takeAway);
                     } else {
@@ -345,15 +340,15 @@ public class EcomProductCheckOutPage extends AppCompatActivity implements Adapte
                     ecomCheckoutLandmark.setText(response.body().getUser().getLandmark());
                     ecomCheckoutPincode.setText(response.body().getUser().getPincode());
                     ecomCheckoutAddress.setText(response.body().getUser().getAddress());
-                   // ecomCheckoutcity.setText(response.body().getUser().getCity_id());
+                    // ecomCheckoutcity.setText(response.body().getUser().getCity_id());
                     ecomCheckoutAmount.setText("Rs: " + amount);
 
 //                    getDeliveryCharge();
                     session1 = new Session(EcomProductCheckOutPage.this);
                     String auth1 = "Bearer " + session1.getUserDetails().get(Session.TOKEN);
 
-                    Log.e("sellerId",sellerId);
-                    Call<DeliveryChargeModel> call1 = RetrofitClient.getInstance().getApi().deliveryCharge(auth1,sellerId);
+                    Log.e("sellerId", sellerId);
+                    Call<DeliveryChargeModel> call1 = RetrofitClient.getInstance().getApi().deliveryCharge(auth1, sellerId);
                     call1.enqueue(new Callback<DeliveryChargeModel>() {
                         @Override
                         public void onResponse(Call<DeliveryChargeModel> call, Response<DeliveryChargeModel> response) {
@@ -597,7 +592,7 @@ public class EcomProductCheckOutPage extends AppCompatActivity implements Adapte
                 if (response.code() == 200) {
                     Toast.makeText(EcomProductCheckOutPage.this, "Payment Successfull", Toast.LENGTH_SHORT).show();
 //                    balance.setText(response.body().getWallet().getAmount());
-                    Intent i = new Intent(EcomProductCheckOutPage.this,DashboradActivity.class);
+                    Intent i = new Intent(EcomProductCheckOutPage.this, DashboradActivity.class);
                     startActivity(i);
                 }
             }
@@ -612,7 +607,7 @@ public class EcomProductCheckOutPage extends AppCompatActivity implements Adapte
     }
 
 
-//    public class PayuMoneyResponse {
+    //    public class PayuMoneyResponse {
 //        private PayuMoneyResponse.PayuResult result;
 //
 //        public PayuMoneyResponse.PayuResult getResult() {
@@ -636,11 +631,11 @@ public class EcomProductCheckOutPage extends AppCompatActivity implements Adapte
 //        }
 //    }
 // @Override
-public void onPaymentSuccess(String s) {
-    // this method is called on payment success.
-    submitPayment();
-    Toast.makeText(this, "Payment is successful : " + s, Toast.LENGTH_SHORT).show();
-}
+    public void onPaymentSuccess(String s) {
+        // this method is called on payment success.
+        submitPayment();
+        Toast.makeText(this, "Payment is successful : " + s, Toast.LENGTH_SHORT).show();
+    }
 
     // @Override
     public void onPaymentError(int i, String s) {
